@@ -1,0 +1,46 @@
+h1 {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  margin:auto;
+}
+
+
+footer {
+  margin-top: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th {
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: bisque;
+}
+
+table td {
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  height: 20px;
+  background-color: cornsilk;
+}
+
+tr {
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.alert {
+  background-color: #ccf;
+  padding: 20px;
+  width: 400px;
+  border: 2px solid black;
+  text-align: center;
+}
