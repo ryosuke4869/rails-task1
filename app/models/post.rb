@@ -6,7 +6,7 @@ class Post < ApplicationRecord
 
   validate :start_fin_check
     def start_fin_check
-      if :fin < :start
+      if self.fin < self.start
         errors.add(:fin,"は開始日以降の日付にしてください")
       end
     end
