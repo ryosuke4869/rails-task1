@@ -1,0 +1,47 @@
+<h3>ユーザー編集</h3>
+<% if flash[:notice] %>
+  <p class = "alert"><%= flash[:notice]%></p>
+<% end %>
+<%= render "shared/error", obj: @post %>
+
+<div class="main-container">
+  <%= form_with model: @post do |f|%>
+    <table>
+      <tr>
+        <th><%= f.label :tille, "タイトル" %></th>
+        <td><%= f.text_field :title %></td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :start, "開始日" %></th>
+        <td><%= f.date_field :start %> </td>
+      </tr>
+      
+      <tr>
+        <th><%= f.label :fin, "終了日" %></th>
+        <td><%= f.date_field :fin %></td>
+          
+      </tr>
+
+      <tr>
+        <th><%= f.label :all, "終日" %></th>
+        <td><%= f.check_box :all %>
+          <p>終日の場合はチェックを入れます</p>
+        </td>
+        
+      </tr>
+
+      <tr>
+        <th><%= f.label :memo, "メモ" %></th>
+        <td><%= f.text_area :memo, {class: "memo"} %> </td>
+      </tr>
+    </table>
+
+    <div>
+      <ul>
+        <li><%= f.submit "編集を完了"%></li>
+        <li><%= link_to "スケジュール一覧に戻る", posts_path%></li>
+      </ul>
+    </div>
+  <% end %>
+</div>
